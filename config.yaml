@@ -1,0 +1,28 @@
+# Dataset Configuration
+dataset:
+  img_folder: '/home/mehran/.cache/kagglehub/datasets/atulanandjha/lfw_funneled'
+
+  pairs_file: '/home/mehran/.cache/kagglehub/datasets/atulanandjha/pairsDevTrain.txt'
+  train_ratio: 0.8
+  image_size: 224  # ResNet default input size
+
+# DataLoader Configuration
+dataloader:
+  batch_size: 32
+  num_workers: 4
+  shuffle: true
+
+# Model Configuration
+model:
+  backbone: "resnet18"
+  pretrained: true
+  embedding_size: 128
+  freeze_backbone: false
+  
+# Training Configuration
+training:
+  epochs: 20
+  learning_rate: 0.001
+  margin: 1.0
+  checkpoint_dir: "checkpoints"
+  save_best_only: true
