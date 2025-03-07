@@ -95,8 +95,7 @@ def get_dataloaders(config):
     Returns:
         tuple: (train_loader, val_loader)
     """
-    transform = get_transforms(config['dataset']['image_size'])
-    
+    transform = get_transforms(config['dataset']['image_size']) 
     # Create dataset
     dataset = LFWDataset(
         pairs_file=config['dataset']['pairs_file'],
